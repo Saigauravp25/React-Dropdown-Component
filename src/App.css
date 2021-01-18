@@ -58,6 +58,10 @@ body{
   flex-wrap: wrap;
 }
 
+.dropdown-values::-webkit-scrollbar {
+  display: none;
+}
+
 .dropdown-value{
   color: rgb(25, 25, 25);
   background-color: rgb(175, 175, 175);
@@ -88,6 +92,10 @@ body{
   opacity: 0;
   transition: opacity 300ms, visibility 300ms;
   -webkit-transition: opacity 300ms, visibility 300ms;
+}
+
+.dropdown-options::-webkit-scrollbar {
+  display: none;
 }
 
 .dropdown-active{

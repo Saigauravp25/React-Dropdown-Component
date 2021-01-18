@@ -98,16 +98,18 @@ function Dropdown (props) {
         </div>
       </div>
 
-      <div className={`dropdown-options ${isToggled ? "dropdown-active" : ""}`}>
-        {items.filter(it => selections.findIndex(sel => sel === it.id) === -1).map(item =>
-          <div className="dropdown-item" key={item.id} onClick={() => handleAddItem(item.id)}>
-            {showIcons
-              ? <img src={item.image}/>
-              : null
-            }
-            {item.label}
-          </div>
-        )}
+      <div id="opt-container">
+        <div className={`dropdown-options ${isToggled ? "dropdown-active" : ""}`}>
+          {items.filter(it => selections.findIndex(sel => sel === it.id) === -1).map(item =>
+            <div className="dropdown-item" key={item.id} onClick={() => handleAddItem(item.id)}>
+              {showIcons
+                ? <img src={item.image}/>
+                : null
+              }
+              {item.label}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
